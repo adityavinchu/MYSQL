@@ -20,7 +20,27 @@ SELECT * FROM Employee_Payroll;
 SELECT Name FROM Employee_Payroll;
 
 /*UC5- Retrive data of Particular Employee*/
+
 SELECT Salery FROM Employee_Payroll WHERE NAME='Amit';
 select * from Employee_Payroll WHERE StartDate BETWEEN CAST('2022-01-10' AS DATE) AND CAST('2022-04-01' AS DATE);
 
 
+/*UC6- Ability To Add Gender*/
+
+Alter table Employee_Payroll add Gender varchar(2);
+UPDATE Employee_Payroll SET Gender='M' where Name='Ritesh';
+UPDATE Employee_Payroll SET Gender='F' where Name='shraddha' ;
+
+/*UC7- Ability to find min, max, average,count*/
+
+Select sum(Salery) from Employee_Payroll where Gender='F'; 
+Select avg(Salery) from Employee_Payroll where Gender='F';
+Select min(Salery) from Employee_Payroll where Gender='F'; 
+Select max(Salery) from Employee_Payroll where Gender='F'; 
+Select count(id) from Employee_Payroll where Gender='F'; 
+
+Select sum(Salery) from Employee_Payroll where Gender='M'; 
+Select min(Salery) from Employee_Payroll where Gender='M'; 
+Select max(Salery) from Employee_Payroll where Gender='M'; 
+Select avg(Salery) from Employee_Payroll where Gender='M';
+Select count(id) from Employee_Payroll where Gender='M'; 
