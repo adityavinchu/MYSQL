@@ -1,4 +1,9 @@
+
+
+
 /*UC1 UC2 DataBase Created and Employee_Payroll Created*/
+create database Employee_Payroll;
+use Employee_Payroll;
 CREATE TABLE Employee_Payroll
 (
 id int NOT NULL IDENTITY(1,1),
@@ -27,9 +32,9 @@ select * from Employee_Payroll WHERE StartDate BETWEEN CAST('2022-01-10' AS DATE
 
 /*UC6- Ability To Add Gender*/
 
-Alter table Employee_Payroll add Gender varchar(2);
-UPDATE Employee_Payroll SET Gender='M' where Name='Ritesh';
-UPDATE Employee_Payroll SET Gender='F' where Name='shraddha' ;
+Alter table Employee_Payroll add gender varchar(2);
+UPDATE Employee_Payroll SET gender='M' where Name='Ritesh';
+UPDATE Employee_Payroll SET gender='F' where Name='shraddha' ;
 
 /*UC7- Ability to find min, max, average,count*/
 
