@@ -20,6 +20,7 @@ Email varchar(50),
 
 SELECT * from Addressbook;
 
+
 /*UC3-Ability to insert new Contacts to Address Book*/
 
 INSERT into Addressbook values ('akash','patil','baramati','pune','maharashtra','413106','7847487744','akashpatil@gmail.com')
@@ -99,6 +100,7 @@ CREATE TABLE  type
 	type_id int PRIMARY KEY IDENTITY(1,1),
 	type_name varchar(30)
 );
+
 
 SELECT * from type
 SELECT * from Addressbook 
