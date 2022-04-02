@@ -63,9 +63,9 @@ Alter table Employee_Payroll add BasicPay Decimal , Deduction decimal, TaxablePa
 update Employee_Payroll set PhoneNumber='9988774458' ,Address='100/554',Department ='CSE'  where id =1;
 update Employee_Payroll set PhoneNumber='7744885566' ,Address='442/114',Department ='PHY'  where id =2;
 update Employee_Payroll set PhoneNumber='8778447788' ,Address='111/444',Department ='CHE'  where id =3
-update Employee_Payroll set BasicPay=75000 where id =1;
-update Employee_Payroll set BasicPay=80000 where id =2;
-update Employee_Payroll set BasicPay=75000 where id =3;
+update Employee_Payroll set BasicPay=35000 where id =1;
+update Employee_Payroll set BasicPay=28000 where id =2;
+update Employee_Payroll set BasicPay=25000 where id =3;
 
 
 /*UC10 -Add info about tersa working in two different department*/
@@ -87,3 +87,5 @@ select * from EMP_DEPARTMENT;
 select * from Employee_Payroll;
 insert into Employee_Service values(2,3);
 select Employee_Payroll.Name,EMP_DEPARTMENT.department_name from ((Employee_Service inner join Employee_Payroll on Employee_Service.service_id=Employee_Payroll.id)inner join EMP_DEPARTMENT on Employee_Service.service_id=Employee_Payroll.id); 
+
+
